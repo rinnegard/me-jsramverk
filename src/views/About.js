@@ -9,7 +9,8 @@ function About() {
             <h2>Länkar</h2>
             <ul>
                 <li><a href="https://jsramverk.se">Kurswebbplats</a></li>
-                <li><a href="https://github.com/emilfolino/jsramverk.se">GitHub</a></li>
+                <li><a href="https://github.com/emilfolino/jsramverk.se">GitHub - Kursen</a></li>
+                <li><a href="https://github.com/rinnegard/me-jsramverk">GitHub - Den här webbplatsen</a></li>
             </ul>
 
         </div>
