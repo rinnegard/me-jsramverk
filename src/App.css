@@ -1,8 +1,24 @@
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+body, .root, .container, .content {
+    min-height: 100vh;
+}
+
+
+
 .header {
-    border-bottom: 1px solid black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background-color: #333;
 }
 
 .menu {
@@ -20,4 +36,57 @@
 	width: 30px;
     height: 30px;
     margin: 3px;
+}
+
+.nav {
+    width: 60%;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav a {
+    padding: 1.25rem 0.5rem;
+    font-size: 1.6rem;
+    max-width: 140px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: #E0B053;
+}
+
+.content {
+    width: 40%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+img {
+    float: right;
+    width: 300px;
+}
+
+.toc {
+	width: 10%;
+	float: left;
+}
+
+.report {
+    width: 90%;
+    float: right;
 }

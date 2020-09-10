@@ -11,11 +11,12 @@ import HelloWorld from './components/HelloWorld';
 import Header from "./components/Header";
 import Home from "./views/Home";
 import About from "./views/About";
+import Report from "./views/Report";
 
 
 function App() {
   return (
-    <div>
+    <div className="container">
         <Router>
         <Header />
             <Switch>
@@ -24,6 +25,9 @@ function App() {
                 </Route>
                 <Route path="/about">
                     <About/>
+                </Route>
+                <Route path="/report">
+                    <Report />
                 </Route>
             </Switch>
         </Router>
