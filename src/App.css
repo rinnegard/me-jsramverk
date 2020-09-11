@@ -86,6 +86,11 @@ img {
 	float: left;
 }
 
+.toc ul {
+	padding: 0;
+    list-style: none;
+}
+
 .report {
     width: 90%;
     float: right;
