@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from "./Navigation"
 import NavigationBar from "./NavigationBar"
 
 function Header() {
