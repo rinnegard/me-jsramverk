@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Toc() {
     return (
         <div className="toc">
+            <h2>Vecka</h2>
             <ul>
                 <li>
                     <Link
