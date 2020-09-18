@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Header from "./components/Header";
+import Login from "./components/Login";
 import Home from "./views/Home";
 import About from "./views/About";
 import Report from "./views/Report";
@@ -25,6 +26,9 @@ function App() {
                 </Route>
                 <Route path="/report/week/:id">
                     <Report />
+                </Route>
+                <Route path="/login">
+                    <Login />
                 </Route>
             </Switch>
         </Router>

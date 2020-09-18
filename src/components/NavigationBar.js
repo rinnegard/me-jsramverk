@@ -29,6 +29,14 @@ function NavigationBar(props) {
                         Reports
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="/login"
+                        onClick={props.closeMenu}
+                    >
+                        Log in
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
