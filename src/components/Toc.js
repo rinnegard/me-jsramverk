@@ -20,13 +20,6 @@ function Toc() {
                         2
                     </Link>
                 </li>
-                <li>
-                    <Link
-                        to="/report/week/3"
-                    >
-                        3
-                    </Link>
-                </li>
             </ul>
         </div>
     );

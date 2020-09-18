@@ -23,7 +23,7 @@ function App() {
                 <Route path="/about">
                     <About/>
                 </Route>
-                <Route path="/report">
+                <Route path="/report/week/:id">
                     <Report />
                 </Route>
             </Switch>
