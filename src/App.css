@@ -95,3 +95,82 @@ img {
     width: 90%;
     float: right;
 }
+
+form {
+    width: 32rem;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    padding: 0.6rem 0.6rem;
+    box-sizing: border-box;
+    width: 32rem;
+    margin-bottom: 1.4rem;
+}
+
+input:focus {
+    border: 1px solid blue;
+}
+
+input:invalid, select:invalid {
+    border: 1px solid red;
+}
+
+label {
+    font-weight: bold;
+    margin: 2rem 0 0 0;
+    display: block;
+}
+
+
+.button {
+    color: #333;
+    background-color: #fff;
+    background-image: linear-gradient(#fff, #eee);
+    border: 1px solid #ccc;
+    text-decoration: none;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.4rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    line-height: 1.4;
+}
+
+.button:hover {
+    background-color: #ddd;
+    background-image: none;
+}
+
+.button:active {
+    background-color: #dcdcdc;
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.full-width-button {
+    width: 100%;
+}
+
+.blue-button {
+    color: #fff;
+    background-color: #2049e1;
+    background-image: linear-gradient(#2049e1, #0039d0);
+    border-color: #0029c0;
+}
+
+.blue-button:hover {
+    background-color: #0029c0;
+    background-image: none;
+}
+
+.blue-button:active {
+    background-color: #0029c0;
+    background-image: none;
+    box-shadow: inset 0 2px 4px #0019b0;
+}
