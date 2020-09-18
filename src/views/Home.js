@@ -9,7 +9,6 @@ function Home(props) {
     useEffect(() => {
         axios.get("http://localhost:1337/")
         .then(function(res) {
-            console.log(res.data);
             setContent(res.data.content);
         })
         .catch(function(error) {
