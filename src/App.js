@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Header from "./components/Header";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import Home from "./views/Home";
 import About from "./views/About";
 import Report from "./views/Report";
@@ -29,6 +30,9 @@ function App() {
                 </Route>
                 <Route path="/login">
                     <Login />
+                </Route>
+                <Route path="/register">
+                    <Register />
                 </Route>
             </Switch>
         </Router>

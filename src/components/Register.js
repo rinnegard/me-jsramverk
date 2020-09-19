@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function Login() {
+function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -10,7 +10,7 @@ function Login() {
         e.preventDefault();
         console.log(email);
         console.log(password);
-        axios.post("http://localhost:1337/login", {
+        axios.post("http://localhost:1337/register", {
             email: email,
             password: password
         })
@@ -33,18 +33,13 @@ function Login() {
 
     return (
         <div className="content">
-            <h1>Log in</h1>
+            <h1>Register</h1>
             <form onSubmit={formSubmit}>
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" required placeholder="john.doe@gmail.com" onChange={inputChange}/>
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" required onChange={inputChange}/>
                 <input className="blue-button button" type="submit" value="Submit" />
-                <Link
-                    to="/register"
-                >
-                    Click here to register!
-                </Link>
             </form>
 
         </div>
@@ -52,4 +47,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default Register;
