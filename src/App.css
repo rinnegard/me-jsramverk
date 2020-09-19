@@ -82,17 +82,43 @@ img {
 }
 
 .toc {
-	width: 10%;
+	width: 18%;
 	float: left;
+    background-color: #333;
+}
+
+.toc h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .toc ul {
+    margin: 0;
+    margin-bottom: 5px; 
 	padding: 0;
     list-style: none;
 }
 
+.toc li {
+    text-align: center;
+}
+
+.toc a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.toc li:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #E0B053
+}
+
 .report {
-    width: 90%;
+    width: 80%;
     float: right;
 }
 

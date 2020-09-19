@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Toc() {
     return (
         <div className="toc">
-            <h2></h2>
+            <h2>Content:</h2>
             <ul>
                 <li>
                     <Link
