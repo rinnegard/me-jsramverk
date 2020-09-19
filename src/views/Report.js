@@ -9,11 +9,13 @@ function Report() {
     console.log(id);
 
     const [content, setContent] = useState("");
+    const [week, setWeek] = useState("");
 
     useEffect(() => {
         axios.get("http://localhost:1337/reports/week/" + id)
         .then(function(res) {
             console.log(res.data.data.result);
+            setWeek(res.data.data.result.week)
             setContent(res.data.data.result.content);
         })
         .catch(function(error) {
@@ -25,6 +27,7 @@ function Report() {
         <div className="content">
             <Toc />
             <div className="report">
+                <h1>Week {week}</h1>
                 <ReactMarkdown source={content}/>
             </div>
         </div>

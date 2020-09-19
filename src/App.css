@@ -111,12 +111,19 @@ input, select, textarea {
     margin-bottom: 1.4rem;
 }
 
-input:focus {
-    border: 1px solid blue;
-}
+
 
 input:invalid, select:invalid {
     border: 1px solid red;
+}
+
+input[type=email]:valid, input[type=password]:valid {
+    border: 1px solid green;
+}
+
+input:focus {
+    border: 1px solid blue;
+    outline: none;
 }
 
 label {
