@@ -66,6 +66,10 @@ body, .root, .container, .content {
     background-color: #E0B053;
 }
 
+.selected {
+    background-color: #7878d9;
+}
+
 .content {
     width: 40%;
     margin: 0 auto;
@@ -96,7 +100,7 @@ img {
 
 .toc ul {
     margin: 0;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 	padding: 0;
     list-style: none;
 }

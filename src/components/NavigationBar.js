@@ -1,41 +1,49 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavigationBar(props) {
     return (
         <nav className="nav">
             <ul>
                 <li>
-                    <Link
+                    <NavLink
+                        exact
+                        activeClassName="selected"
                         to="/"
                         onClick={props.closeMenu}
                     >
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link
+                    <NavLink
+                        exact
+                        activeClassName="selected"
                         to="/about"
                         onClick={props.closeMenu}
                     >
                         About
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link
+                    <NavLink
+                        exact
+                        activeClassName="selected"
                         to="/report/week/1"
                         onClick={props.closeMenu}
                     >
                         Reports
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link
+                    <NavLink
+                        exact
+                        activeClassName="selected"
                         to="/login"
                         onClick={props.closeMenu}
                     >
                         Log in
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

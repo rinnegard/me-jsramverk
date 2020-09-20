@@ -10,7 +10,7 @@ function Toc() {
                     <Link
                         to="/report/add"
                     >
-                        Add new
+                        Add/Edit
                     </Link>
                 </li>
                 <li>

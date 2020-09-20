@@ -1,18 +1,30 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 
-function NewReport() {
+
+function NewReport(props) {
     const [week, setWeek] = useState("");
     const [content, setContent] = useState("");
 
     function formSubmit(e) {
+        e.preventDefault();
+
         console.log(week);
         console.log(content);
-        e.preventDefault();
-        axios.post("http://localhost:1337/report", {
+
+        const authAxios = axios.create({
+            baseURL: "http://localhost:1337/",
+            headers: {
+                Authorization: `Bearer ${props.auth.token}`
+            }
+        });
+
+        const body = {
             week: week,
             content: content
-        })
+        }
+
+        authAxios.post("reports", body)
         .then(function(res) {
             console.log(res);
         })
@@ -22,9 +34,12 @@ function NewReport() {
     }
 
     function inputChange(e) {
-        if (e.target.type === "week") {
+        console.log("Getting input..");
+        console.log(e.target);
+        if (e.target.type === "number") {
             setWeek(e.target.value);
-        } else if (e.target.type === "content") {
+            console.log(week);
+        } else if (e.target.type === "textarea") {
             setContent(e.target.value);
         }
     }
@@ -34,7 +49,7 @@ function NewReport() {
             <h1>Add new report</h1>
             <form onSubmit={formSubmit}>
                 <label htmlFor="week">Week</label>
-                <input type="number" name="week" required min="1" step="1" onChange={inputChange}/>
+                <input type="number" name="week" min="1" required onChange={inputChange} value={week}/>
                 <label htmlFor="content">Content</label>
                 <textarea name="content" required onChange={inputChange}/>
                 <input className="blue-button button" type="submit" value="Submit" />
