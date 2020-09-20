@@ -27,7 +27,6 @@ function Login(props) {
 
     function inputChange(e) {
         if (e.target.type === "email") {
-            console.log(email);
             setEmail(e.target.value);
         } else if (e.target.type === "password") {
             setPassword(e.target.value);

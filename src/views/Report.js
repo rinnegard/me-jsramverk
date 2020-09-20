@@ -14,7 +14,6 @@ function Report() {
     useEffect(() => {
         axios.get("http://localhost:1337/reports/week/" + id)
         .then(function(res) {
-            console.log(res.data.data.result);
             setWeek(res.data.data.result.week)
             setContent(res.data.data.result.content);
         })

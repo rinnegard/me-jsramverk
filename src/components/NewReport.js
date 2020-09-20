@@ -34,11 +34,8 @@ function NewReport(props) {
     }
 
     function inputChange(e) {
-        console.log("Getting input..");
-        console.log(e.target);
         if (e.target.type === "number") {
             setWeek(e.target.value);
-            console.log(week);
         } else if (e.target.type === "textarea") {
             setContent(e.target.value);
         }
