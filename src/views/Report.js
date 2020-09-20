@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 function Report() {
     const { id } = useParams();
-    console.log(id);
 
     const [content, setContent] = useState("");
     const [week, setWeek] = useState("");

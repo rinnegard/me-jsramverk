@@ -43,7 +43,7 @@ function NewReport(props) {
 
     return (
         <div className="content">
-            <h1>Add new report</h1>
+            <h1>Add/Edit new report</h1>
             <form onSubmit={formSubmit}>
                 <label htmlFor="week">Week</label>
                 <input type="number" name="week" min="1" required onChange={inputChange} value={week}/>
