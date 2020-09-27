@@ -1,4 +1,4 @@
-[Github](https://github.com/rinnegard/me-api).
+[Github](https://github.com/rinnegard/me-jsramverk).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
