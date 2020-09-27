@@ -11,7 +11,7 @@ function Login(props) {
         e.preventDefault();
         console.log(email);
         console.log(password);
-        axios.post("http://localhost:1337/login", {
+        axios.post("https://me-api.rinnegard.me/login", {
             email: email,
             password: password
         })

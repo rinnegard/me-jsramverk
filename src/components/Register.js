@@ -10,7 +10,7 @@ function Register() {
         e.preventDefault();
         console.log(email);
         console.log(password);
-        axios.post("http://localhost:1337/register", {
+        axios.post("https://me-api.rinnegard.me/register", {
             email: email,
             password: password
         })

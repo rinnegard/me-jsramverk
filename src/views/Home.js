@@ -7,7 +7,7 @@ function Home(props) {
     const [content, setContent] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:1337/")
+        axios.get("https://me-api.rinnegard.me/")
         .then(function(res) {
             setContent(res.data.content);
         })

@@ -13,7 +13,7 @@ function NewReport(props) {
         console.log(content);
 
         const authAxios = axios.create({
-            baseURL: "http://localhost:1337/",
+            baseURL: "https://me-api.rinnegard.me/",
             headers: {
                 Authorization: `Bearer ${props.auth.token}`
             }

@@ -11,7 +11,7 @@ function Report() {
     const [week, setWeek] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:1337/reports/week/" + id)
+        axios.get("https://me-api.rinnegard.me/reports/week/" + id)
         .then(function(res) {
             setWeek(res.data.data.result.week)
             setContent(res.data.data.result.content);
