@@ -43,7 +43,6 @@ test.describe("React", function() {
 
     function matchUrl(target) {
         browser.getCurrentUrl().then(function(url) {
-            console.log(url);
             assert.ok(url.endsWith("/" + target));
         });
     }
@@ -74,6 +73,35 @@ test.describe("React", function() {
 
         assertH1("Information om kursen");
         matchUrl("about");
+
+        done();
+    });
+
+    test.it("Test go to Log in", function(done) {
+        goToNavLink("Log in");
+
+        assertH1("Log in");
+        matchUrl("login");
+
+        done();
+    });
+
+    test.it("Test go to Register", function(done) {
+        goToNavLink("Log in");
+        goToNavLink("Click here to register!");
+
+        assertH1("Register");
+        matchUrl("register");
+
+        done();
+    });
+
+    test.it("Test go to week 3", function(done) {
+        goToNavLink("Reports");
+        goToNavLink("Week 3");
+
+        assertH1("Week 3");
+        matchUrl("report/week/3");
 
         done();
     });
