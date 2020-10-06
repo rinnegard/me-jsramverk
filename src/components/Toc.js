@@ -29,6 +29,13 @@ function Toc() {
                 </li>
                 <li>
                     <Link
+                        to="/report/week/4"
+                    >
+                        Week 4
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         to="/report/add"
                     >
                         Add/Edit
