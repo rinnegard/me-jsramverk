@@ -87,6 +87,7 @@ img {
 
 .report img {
     width: 80px;
+    float: none;
 }
 
 .toc {
