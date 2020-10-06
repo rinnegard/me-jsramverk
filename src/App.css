@@ -85,6 +85,10 @@ img {
     width: 300px;
 }
 
+.report img {
+    width: 80px;
+}
+
 .toc {
 	width: 18%;
 	float: left;
