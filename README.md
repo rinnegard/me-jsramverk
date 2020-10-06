@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rinnegard/me-jsramverk.svg?branch=master)](https://travis-ci.org/rinnegard/me-jsramverk)
+[![Build Status](https://scrutinizer-ci.com/g/rinnegard/me-jsramverk/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rinnegard/me-jsramverk/build-status/master)
+
 [Github](https://github.com/rinnegard/me-jsramverk).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
