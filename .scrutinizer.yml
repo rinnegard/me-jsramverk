@@ -3,4 +3,4 @@ build:
     coverage:
       tests:
         override:
-          - command: npm test
+          - command: npm run ci
