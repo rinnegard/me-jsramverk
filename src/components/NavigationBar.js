@@ -45,6 +45,16 @@ function NavigationBar(props) {
                         Log in
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        exact
+                        activeClassName="selected"
+                        to="/chat"
+                        onClick={props.closeMenu}
+                    >
+                        Chat
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );

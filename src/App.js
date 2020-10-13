@@ -12,6 +12,7 @@ import NewReport from "./components/NewReport";
 import Home from "./views/Home";
 import About from "./views/About";
 import Report from "./views/Report";
+import Chat from "./views/Chat";
 
 const auth = {
   token: "",
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <Route path="/register">
                 <Register />
+            </Route>
+            <Route path="/chat">
+                <Chat />
             </Route>
         </Switch>
         </Router>
