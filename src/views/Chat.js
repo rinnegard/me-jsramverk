@@ -3,6 +3,7 @@ import {socket} from "../service/socket.js";
 
 function Chat() {
     const [newMessage, setNewMessage] = useState("");
+    const [username, setUsername] = useState("");
     const [messages, setMessages] = useState([]);
 
 
@@ -35,8 +36,10 @@ function Chat() {
 
 
     function inputChange(e) {
-        if (e.target.type === "textarea") {
+        if (e.target.name === "message") {
             setNewMessage(e.target.value);
+        } else if (e.target.name === "username") {
+            setUsername(e.target.value);
         }
     }
 
@@ -47,8 +50,10 @@ function Chat() {
                 {messages}
             </div>
             <form onSubmit={formSubmit}>
-                <label htmlFor="message">Content</label>
-                <textarea name="message" required onChange={inputChange}/>
+                <label htmlFor="username">Username</label>
+                <input type="text" name="username" required onChange={inputChange} value={username}/>
+                <label htmlFor="message">Message</label>
+                <input type="text" name="message" required onChange={inputChange} value={newMessage}/>
                 <input className="blue-button button" type="submit" value="Submit" />
             </form>
 
