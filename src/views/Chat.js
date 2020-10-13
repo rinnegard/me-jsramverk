@@ -1,20 +1,57 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import {socket} from "../service/socket.js";
 
 function Chat() {
-    const { id } = useParams();
+    const [newMessage, setNewMessage] = useState("");
+    const [messages, setMessages] = useState([]);
 
-    const [content, setContent] = useState("");
-    const [week, setWeek] = useState("");
+
+
 
     useEffect(() => {
 
+
+        socket.on('connect', function() {
+            console.info("Connected");
+            socket.on('chat message', function (message) {
+                console.log("Message received: " + message);
+                setMessages(messages => [...messages, message])
+            });
+        });
+
+        socket.on('disconnect', function() {
+            console.info("Disconnected");
+        });
     });
+
+
+
+    function formSubmit(e) {
+        e.preventDefault()
+        console.log(newMessage);
+        socket.emit('chat message', newMessage);
+        setNewMessage("");
+    }
+
+
+    function inputChange(e) {
+        if (e.target.type === "textarea") {
+            setNewMessage(e.target.value);
+        }
+    }
 
     return (
         <div className="content">
             <h1>Chat</h1>
+            <div className="chatbox">
+                {messages}
+            </div>
+            <form onSubmit={formSubmit}>
+                <label htmlFor="message">Content</label>
+                <textarea name="message" required onChange={inputChange}/>
+                <input className="blue-button button" type="submit" value="Submit" />
+            </form>
+
         </div>
     )
 }
