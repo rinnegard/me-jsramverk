@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {socket} from "../service/socket.js";
+import ChatMessage from "../components/ChatMessage.js";
 
 function Chat() {
     const [newMessage, setNewMessage] = useState("");
@@ -47,7 +48,11 @@ function Chat() {
         <div className="content">
             <h1>Chat</h1>
             <div className="chatbox">
-                {messages}
+                {
+                    messages.map(function(item, i) {
+                        return <ChatMessage key={i} message={item}/>
+                    })
+                }
             </div>
             <form onSubmit={formSubmit}>
                 <label htmlFor="username">Username</label>
