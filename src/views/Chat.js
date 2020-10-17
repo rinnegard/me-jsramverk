@@ -29,7 +29,11 @@ function Chat() {
     function formSubmit(e) {
         e.preventDefault()
         console.log(newMessage);
-        socket.emit('chat message', newMessage);
+        socket.emit('chat message', {
+            message: newMessage,
+            username: username,
+            time: Date.now()
+        });
         setNewMessage("");
     }
 
@@ -48,7 +52,7 @@ function Chat() {
             <div className="chatbox">
                 {
                     messages.map(function(item, i) {
-                        return <ChatMessage key={i} message={item}/>
+                        return <ChatMessage key={i} message={item.message} username={item.username} time={item.time}/>
                     })
                 }
             </div>
