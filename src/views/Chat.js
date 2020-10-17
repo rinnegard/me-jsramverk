@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-// import {socket} from "../service/socket.js";
 import ChatMessage from "../components/ChatMessage.js";
 import io from 'socket.io-client';
 import useSocket from 'use-socket.io-client';
@@ -10,9 +9,6 @@ function Chat() {
     const [messages, setMessages] = useState([]);
     const [connected, setConnected] = useState(false);
     const [socket] = useSocket('https://socket-chat.rinnegard.me/')
-
-
-    // const socket = io('https://socket-chat.rinnegard.me/');
 
     useEffect(() => {
         socket.on('connect', function() {
