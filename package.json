@@ -16,7 +16,8 @@
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "socket.io-client": "^2.3.1"
+    "socket.io-client": "^2.3.1",
+    "use-socket.io-client": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
