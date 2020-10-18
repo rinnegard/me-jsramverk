@@ -13,6 +13,12 @@ function Chat() {
     useEffect(() => {
         socket.on('connect', function() {
             console.info("Connected");
+            socket.emit('new user', {
+                message: "New user connected",
+                username: "Server",
+                time: Date.now()
+            });
+
             socket.on('new user', function (message) {
                 console.log("Server Message received: " + message);
                 setMessages(messages => [...messages, message])
