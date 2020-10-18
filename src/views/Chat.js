@@ -13,6 +13,10 @@ function Chat() {
     useEffect(() => {
         socket.on('connect', function() {
             console.info("Connected");
+            socket.on('new user', function (message) {
+                console.log("Server Message received: " + message);
+                setMessages(messages => [...messages, message])
+            });
             socket.on('chat message', function (message) {
                 console.log("Message received: " + message);
                 setMessages(messages => [...messages, message])
@@ -56,12 +60,12 @@ function Chat() {
                     })
                 }
             </div>
-            <form onSubmit={formSubmit}>
+            <form className="chat-form" onSubmit={formSubmit}>
                 <label htmlFor="username">Username</label>
                 <input type="text" name="username" required onChange={inputChange} value={username}/>
                 <label htmlFor="message">Message</label>
                 <input type="text" name="message" required onChange={inputChange} value={newMessage}/>
-                <input className="blue-button button" type="submit" value="Submit" />
+                <input className="button" type="submit" value="Send Message" />
             </form>
 
         </div>
