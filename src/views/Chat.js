@@ -7,7 +7,6 @@ function Chat() {
     const [newMessage, setNewMessage] = useState("");
     const [username, setUsername] = useState("");
     const [messages, setMessages] = useState([]);
-    const [connected, setConnected] = useState(false);
     const [socket] = useSocket('https://socket-chat.rinnegard.me/')
 
     useEffect(() => {
@@ -19,6 +18,15 @@ function Chat() {
                 time: Date.now()
             });
 
+            socket.emit('load', socket.id);
+
+
+            socket.on('messages', function (oldMessages) {
+                console.log(oldMessages);
+                setMessages(messages => oldMessages)
+            });
+
+
             socket.on('new user', function (message) {
                 console.log("Server Message received: " + message);
                 setMessages(messages => [...messages, message])
@@ -29,10 +37,12 @@ function Chat() {
             });
         });
 
+
+
         socket.on('disconnect', function() {
             console.info("Disconnected");
         });
-    });
+    }, [messages]);
 
 
 
